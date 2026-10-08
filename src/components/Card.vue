@@ -1,6 +1,6 @@
 <template>
-    <div class="bg-white p-6 max-w-sm text-black">
-      <div class="flex flex-col items-start space-x-3">
+    <div class="bg-white p-6 text-black">
+      <div class="flex flex-col items-start">
         <div class="mb-2">
             <slot></slot>
         </div>

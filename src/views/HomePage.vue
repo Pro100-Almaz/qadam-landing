@@ -23,10 +23,10 @@ const openModal = () => {
             <img class="w-full h-screen object-cover" src="../assets/IMG_2336.png" alt="School Image">
             <heroInfo @showModal="openModal"/>
         </div>
-        <div class="w-full flex justify-center absolute bottom-15">
+        <div class="relative z-10 -mt-16 w-full flex justify-center">
             <schoolQualities />
         </div>
-        <div class="md:mt-60 mt-150">
+        <div class="mt-20">
             <schoolNews />
         </div>
         <div class="mt-20">
@@ -39,21 +39,13 @@ const openModal = () => {
             <div>
                 <schoolLife />
             </div>
-            <div class="mt-20">
+            <div class="mt-6 md:mt-10">
                 <schoolQuestions />
             </div>
         </div>
         <div>
             <schoolFooter />
         </div>
-        <Modal v-if="showModal" @close="showModal = false">
-            <p>This is the modal content.</p>
-            <template #footer>
-                <div class="flex justify-end gap-2">
-                    <button class="px-4 py-2 bg-gray-200 rounded" @click="showModal = false">Cancel</button>
-                    <button class="px-4 py-2 bg-blue-600 text-white rounded">Save</button>
-                </div>
-            </template>
-        </Modal>
+        <Modal v-if="showModal" @close="showModal = false" />
     </div>
 </template>

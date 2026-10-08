@@ -1,6 +1,6 @@
 <template>
     <div
-      class="absolute w-full md:w-3/4 grid grid-cols-1 auto-rows-fr gap-4
+      class="w-full px-6 md:px-0 md:w-3/4 grid grid-cols-1 auto-rows-fr gap-4
              md:grid-cols-3 md:gap-0 md:bg-white rounded-2xl
              md:divide-x md:divide-[#D9DEE4]">
   

@@ -6,7 +6,7 @@
         :style="{ transform: `translateX(-${offset}px)` }"
       >
         <template v-for="(image, index) in duplicatedImages" :key="index">
-          <img class="w-1/4 shrink-0 h-auto" :src="image" alt="" />
+          <img class="w-2/3 sm:w-1/3 md:w-1/4 shrink-0 aspect-[4/3] object-cover" :src="image" alt="" />
         </template>
       </div>
     </div>
@@ -48,6 +48,7 @@
   };
   
   onMounted(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     animationFrame = requestAnimationFrame(animate);
   });
   

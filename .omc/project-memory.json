@@ -29,7 +29,7 @@
     "runtime": null
   },
   "build": {
-    "buildCommand": "npm run build 2>&1 | grep -iE \"team-5|error|built in\"",
+    "buildCommand": "python3 - <<'EOF'\nimport pathlib\np=pathlib.Path('src/views/HomePage.vue'); s=p.read_text()\na='''            <div class=\"mt-20\">\n                <schoolQuestions />'''\nassert a in s; s=s.replace(a,'''            <div class=\"mt-6 md:mt-10\">\n                <schoolQuestions />''')\np.write_text(s)\nEOF\nnpm run build 2>&1 | grep -iE \"error|warn|built in\"; git status --short",
     "testCommand": null,
     "lintCommand": null,
     "devCommand": "npm run dev",
@@ -150,6 +150,12 @@
       "path": "src/assets/team-6.png",
       "accessCount": 1,
       "lastAccessed": 1791445464782,
+      "type": "file"
+    },
+    {
+      "path": "PRODUCT.md",
+      "accessCount": 1,
+      "lastAccessed": 1791447678814,
       "type": "file"
     }
   ],

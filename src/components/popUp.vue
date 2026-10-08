@@ -2,7 +2,7 @@
     <teleport to="body">
         <div class="fixed inset-0 z-50 flex items-center justify-center bg-white/30 backdrop-blur-sm"
             @click.self="closeModal">
-            <div class="bg-white rounded-2xl shadow-xl w-full mx-4 md:mx-0 max-w-md" @keydown.esc="closeModal" tabindex="0">
+            <div class="bg-white rounded-2xl shadow-xl w-full mx-4 md:mx-0 max-w-md max-h-[90vh] overflow-y-auto" role="dialog" aria-modal="true">
                 <!-- Header -->
                 <div class="bg-gradient-to-r from-orange-500 to-yellow-300 p-6 rounded-t-2xl">
                     <div class="flex justify-between items-start">
@@ -10,24 +10,24 @@
                             <h2 class="text-2xl font-extrabold text-black leading-snug">{{ $t('modal.send-request') }}</h2>
                             <p class="text-black text-lg font-bold">{{ $t('modal.contact-you') }}</p>
                         </div>
-                        <button @click="closeModal" class="transition active:scale-95 duration-100 ease-in-out cursor-pointer text-black text-2xl font-bold">&times;</button>
+                        <button @click="closeModal" aria-label="Close" class="transition active:scale-95 duration-100 ease-in-out cursor-pointer text-black text-2xl font-bold">&times;</button>
                     </div>
                 </div>
 
                 <!-- Body -->
-                <div class="p-6 space-y-4">
+                <form class="p-6 space-y-4" @submit.prevent="sendToWhatsApp">
                     <!-- Имя -->
                     <div>
-                        <label class="block mb-1 font-semibold">{{ $t('question.name') }}</label>
-                        <input v-model="name" type="text" placeholder="ФИО"
+                        <label for="m-name" class="block mb-1 font-semibold">{{ $t('question.name') }}</label>
+                        <input id="m-name" v-model="name" type="text" autocomplete="name" required
                             class="w-full border rounded-lg px-4 py-2 text-gray-800 focus:outline-none focus:ring focus:border-blue-400" />
                     </div>
 
                     <!-- Телефон -->
                     <div>
-                        <label class="block mb-1 font-semibold">Телефон</label>
+                        <label for="m-phone" class="block mb-1 font-semibold">Телефон</label>
                         <div class="relative">
-                            <input v-model="phone" type="tel" placeholder="+7 (___) ___-__-__"
+                            <input id="m-phone" v-model="phone" type="tel" autocomplete="tel" required minlength="10" placeholder="+7 (___) ___-__-__"
                                 class="w-full border rounded-lg px-4 py-2 pr-12 text-gray-800 focus:outline-none focus:ring focus:border-blue-400" />
                             <div class="absolute inset-y-0 right-3 flex items-center">
                                 <img src="https://flagcdn.com/w40/kz.png" alt="Kazakhstan" class="w-6 h-4" />
@@ -58,19 +58,19 @@
 
                     <!-- Submit -->
                     <div>
-                        <button @click="sendToWhatsApp"
+                        <button type="submit"
                             class="transition active:scale-95 duration-100 ease-in-out cursor-pointer w-full bg-black text-white py-3 rounded-lg font-semibold hover:bg-gray-900">
                             {{ $t('question.send-request') }}
                         </button>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </teleport>
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 
 const emit = defineEmits();
 
@@ -81,6 +81,9 @@ const selected = ref([]);
 const closeModal = () => {
     emit('close');
 };
+const onKey = (e) => { if (e.key === 'Escape') closeModal(); };
+onMounted(() => window.addEventListener('keydown', onKey));
+onUnmounted(() => window.removeEventListener('keydown', onKey));
 function sendToWhatsApp() {
     const targetNumber = '77003357676';
     const grades = selected.value.length > 0 ? selected.value.join(', ') : 'Не выбран';

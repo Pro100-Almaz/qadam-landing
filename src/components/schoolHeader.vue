@@ -34,7 +34,7 @@ watch(selectedLang, (newLang) => {
     <header
         class="fixed top-0 left-0 w-full px-6 py-4 md:px-10 md:py-6 flex items-center header justify-between border-b border-white z-50 bg-transparent">
         <div class="relative md:hidden">
-            <select v-model="selectedLang"
+            <select v-model="selectedLang" aria-label="Language"
                 class="bg-transparent border border-white text-white px-2 py-1 rounded-md focus:outline-none">
                 <option v-for="lang in availableLangs" :key="lang.code" :value="lang.code" class="text-black">
                     {{ lang.label }}
@@ -47,22 +47,20 @@ watch(selectedLang, (newLang) => {
         </RouterLink>
 
         <div class="hidden md:flex items-center gap-4 w-full justify-between">
-            <button
-                class="transition active:scale-95 duration-100 ease-in-out cursor-pointer flex items-center gap-2 border border-white text-white px-4 py-2 rounded-md">
-                <a href="https://dashboard.qadam.edu.kz/">
-                    {{ $t('header.parent-portal') }}
-                </a>
+            <a href="https://dashboard.qadam.edu.kz/"
+                class="transition active:scale-95 duration-100 ease-in-out flex items-center gap-2 border border-white text-white px-4 py-2 rounded-md hover:bg-white/10">
+                {{ $t('header.parent-portal') }}
                 <img src="../assets/login.svg" alt="">
-            </button>
+            </a>
 
             <RouterLink to="/">
                 <img src="../assets/logo_color_white_svg 1.svg" alt="School Logo" class="h-10">
             </RouterLink>
 
             <div class="flex items-center gap-10 text-white">
-                <p>+7 775 007 23 77</p>
+                <a href="tel:+77750072377" class="hover:text-orange-400">+7 775 007 23 77</a>
                 <div class="relative">
-                    <select v-model="selectedLang"
+                    <select v-model="selectedLang" aria-label="Language"
                         class="bg-transparent border  border-white text-white px-2 py-1 rounded-md focus:outline-none">
                         <option v-for="lang in availableLangs" :key="lang.code" :value="lang.code" class="text-black">
                             {{ lang.label }}
@@ -72,13 +70,14 @@ watch(selectedLang, (newLang) => {
             </div>
         </div>
 
-        <button @click="toggleMenu"
+        <button @click="toggleMenu" aria-label="Menu"
             class="md:ml-10 ml-0 transition active:scale-95 duration-100 ease-in-out cursor-pointer">
-            <img class="w-8" src="../assets/burger.svg" alt="Menu">
+            <img class="w-8" src="../assets/burger.svg" alt="">
         </button>
     </header>
 
-    <div class="z-99 fixed top-0 right-0 h-full w-full md:w-1/3 w-1/3 bg-white shadow-lg transform transition-transform duration-300 ease-in-out rounded-l-xl"
+    <div v-if="isMenuOpen" class="fixed inset-0 z-[60] bg-black/40" @click="toggleMenu"></div>
+    <div class="z-[70] fixed top-0 right-0 h-full w-full md:w-1/3 bg-white overflow-y-auto shadow-lg transform transition-transform duration-300 ease-in-out rounded-l-xl"
         :class="isMenuOpen ? 'translate-x-0' : 'translate-x-full'">
 
         <div class="h-full flex flex-col justify-between">
@@ -86,7 +85,7 @@ watch(selectedLang, (newLang) => {
             <div>
                 <div class="p-6 flex justify-between items-center border-b">
                     <img src="../assets/logo-dark.svg" alt="Qadam Logo" class="h-10">
-                    <button @click="toggleMenu"
+                    <button @click="toggleMenu" aria-label="Close"
                         class="transition active:scale-95 duration-100 ease-in-out cursor-pointer text-black text-2xl">✖</button>
                 </div>
 
@@ -142,19 +141,19 @@ watch(selectedLang, (newLang) => {
                     <div class="space-y-2">
                         <div class="flex gap-2">
                             <img src="../assets/phone-dark.svg" alt="">
-                            <p>+7 775 007 23 77</p>
+                            <a href="tel:+77750072377">+7 775 007 23 77</a>
                         </div>
                         <div class="flex gap-2">
                             <img src="../assets/watsup-dark.svg" alt="">
-                            <p>+7 700 335 76 76</p>
+                            <a href="https://wa.me/77003357676" target="_blank" rel="noopener">+7 700 335 76 76</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="flex gap-4 mt-4 items-end">
-                    <img class="w-10 h-10" src="../assets/Frame 84.svg" alt="">
-                    <img class="w-10 h-10" src="../assets/Frame 85.svg" alt="">
-                    <img class="w-10 h-10" src="../assets/Frame 86.svg" alt="">
+                    <a href="https://www.instagram.com/qadamschool" target="_blank" rel="noopener" aria-label="Instagram"><img class="w-10 h-10" src="../assets/Frame 84.svg" alt=""></a>
+                    <a href="https://wa.me/77003357676" target="_blank" rel="noopener" aria-label="WhatsApp"><img class="w-10 h-10" src="../assets/Frame 85.svg" alt=""></a>
+                    <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube"><img class="w-10 h-10" src="../assets/Frame 86.svg" alt=""></a>
                 </div>
             </div>
         </div>
