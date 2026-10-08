@@ -29,7 +29,7 @@
     "runtime": null
   },
   "build": {
-    "buildCommand": "npm run build",
+    "buildCommand": "npm run build 2>&1 | grep -iE \"team-5|error|built in\"",
     "testCommand": null,
     "lintCommand": null,
     "devCommand": "npm run dev",
@@ -133,6 +133,25 @@
       ]
     }
   },
-  "hotPaths": [],
+  "hotPaths": [
+    {
+      "path": "src/assets/team-5.png",
+      "accessCount": 2,
+      "lastAccessed": 1791445480298,
+      "type": "file"
+    },
+    {
+      "path": "vercel.json",
+      "accessCount": 1,
+      "lastAccessed": 1791445245731,
+      "type": "file"
+    },
+    {
+      "path": "src/assets/team-6.png",
+      "accessCount": 1,
+      "lastAccessed": 1791445464782,
+      "type": "file"
+    }
+  ],
   "userDirectives": []
 }
