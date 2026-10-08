@@ -1,0 +1,138 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1791444882882,
+  "projectRoot": "/Users/almazamanzholuly/Documents/qadam/qadam-landing",
+  "techStack": {
+    "languages": [
+      {
+        "name": "JavaScript/TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "package.json"
+        ]
+      }
+    ],
+    "frameworks": [
+      {
+        "name": "vue",
+        "version": "3.5.13",
+        "category": "frontend"
+      },
+      {
+        "name": "vite",
+        "version": "6.2.0",
+        "category": "build"
+      }
+    ],
+    "packageManager": "npm",
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": "npm run build",
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": "npm run dev",
+    "scripts": {
+      "dev": "vite",
+      "build": "vite build",
+      "preview": "vite preview"
+    }
+  },
+  "conventions": {
+    "namingStyle": "camelCase",
+    "importStyle": "ES modules",
+    "testPattern": null,
+    "fileOrganization": "type-based"
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "public",
+      "src"
+    ],
+    "gitBranches": null
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "dist": {
+      "path": "dist",
+      "purpose": "Distribution/build output",
+      "fileCount": 3,
+      "lastAccessed": 1791444882875,
+      "keyFiles": [
+        "favicon.svg",
+        "index.html",
+        "vite.svg"
+      ]
+    },
+    "public": {
+      "path": "public",
+      "purpose": "Public files",
+      "fileCount": 2,
+      "lastAccessed": 1791444882875,
+      "keyFiles": [
+        "favicon.svg",
+        "vite.svg"
+      ]
+    },
+    "src": {
+      "path": "src",
+      "purpose": "Source code",
+      "fileCount": 3,
+      "lastAccessed": 1791444882877,
+      "keyFiles": [
+        "App.vue",
+        "main.js",
+        "style.css"
+      ]
+    },
+    "dist/assets": {
+      "path": "dist/assets",
+      "purpose": "Static assets",
+      "fileCount": 39,
+      "lastAccessed": 1791444882879,
+      "keyFiles": [
+        "DSC09934-WW6HGHBV.png",
+        "IMG_2336-BRCO7rVi.png",
+        "IMG_3364-DwgfJ4PD.png"
+      ]
+    },
+    "src/assets": {
+      "path": "src/assets",
+      "purpose": "Static assets",
+      "fileCount": 74,
+      "lastAccessed": 1791444882880,
+      "keyFiles": [
+        "Clip path group.svg",
+        "DSC09934.png",
+        "Frame 84.svg"
+      ]
+    },
+    "src/components": {
+      "path": "src/components",
+      "purpose": "UI components",
+      "fileCount": 39,
+      "lastAccessed": 1791444882881,
+      "keyFiles": [
+        "AcademicHero.vue",
+        "Card.vue",
+        "MissionHero.vue"
+      ]
+    },
+    "src/views": {
+      "path": "src/views",
+      "purpose": "View templates",
+      "fileCount": 9,
+      "lastAccessed": 1791444882881,
+      "keyFiles": [
+        "AcademicPage.vue",
+        "EnrollmentPage.vue",
+        "ExtraPage.vue"
+      ]
+    }
+  },
+  "hotPaths": [],
+  "userDirectives": []
+}

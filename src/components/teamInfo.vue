@@ -25,7 +25,7 @@
             <h1 class="text-4xl font-bold my-8">{{ $t('team.info.filial-2') }}</h1>
 
             <div class="flex flex-col md:flex-row justify-between gap-8">
-                <jobCard class="w-full md:w-1/2" :position="t('team.info.director')" :name="'Борлыкбаева Райхан'"
+                <jobCard class="w-full md:w-1/2" :position="t('team.info.director')" :name="'Ахметкалиева Серикканым'"
                     :job="t('team.info.director-title')" :description1="t('team.info.director-job-1')" :description2="t('team.info.director-job-2')" :description3="t('team.info.director-job-3')"  :description4="t('team.info.director-job-4')">
                     <img class="w-full rounded-xl" src="../assets/team-5.png" alt="">
                 </jobCard>
