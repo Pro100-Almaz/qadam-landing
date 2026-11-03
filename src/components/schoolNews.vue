@@ -27,22 +27,22 @@
                 <!-- Scrollable container -->
                 <div ref="carousel" class="flex gap-4 md:gap-8 overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar">
                     <newsCard :news-date="formatDate(0)">
-                        <img loading="lazy" decoding="async" class="w-full h-full rounded-t-xl object-cover" src="../assets/carousel_1.webp" alt="">
+                        <img loading="lazy" decoding="async" class="w-full h-full rounded-t-xl object-cover" width="802" height="1316" src="../assets/carousel_1.webp" alt="">
                     </newsCard>
                     <newsCard :news-date="formatDate(3)">
-                        <img loading="lazy" decoding="async" class="w-full h-full object-cover rounded-t-xl" src="../assets/carousel_2.webp" alt="">
+                        <img loading="lazy" decoding="async" class="w-full h-full object-cover rounded-t-xl" width="1492" height="1488" src="../assets/carousel_2.webp" alt="">
                     </newsCard>
                     <newsCard :news-date="formatDate(5)">
-                        <img loading="lazy" decoding="async" class="w-full h-full object-cover rounded-t-xl" src="../assets/carousel_3.webp" alt="">
+                        <img loading="lazy" decoding="async" class="w-full h-full object-cover rounded-t-xl" width="822" height="1348" src="../assets/carousel_3.webp" alt="">
                     </newsCard>
                     <newsCard :news-date="formatDate(5)">
-                        <img loading="lazy" decoding="async" class="w-full h-full object-cover rounded-t-xl" src="../assets/carousel_4.webp" alt="">
+                        <img loading="lazy" decoding="async" class="w-full h-full object-cover rounded-t-xl" width="822" height="1326" src="../assets/carousel_4.webp" alt="">
                     </newsCard>
                     <newsCard :news-date="formatDate(7)">
-                        <img loading="lazy" decoding="async" class="w-full h-full object-cover rounded-t-xl" src="../assets/carousel_3.webp" alt="">
+                        <img loading="lazy" decoding="async" class="w-full h-full object-cover rounded-t-xl" width="822" height="1348" src="../assets/carousel_3.webp" alt="">
                     </newsCard>
                     <newsCard :news-date="formatDate(7)">
-                        <img loading="lazy" decoding="async" class="w-full h-full object-cover rounded-t-xl" src="../assets/carousel_4.webp" alt="">
+                        <img loading="lazy" decoding="async" class="w-full h-full object-cover rounded-t-xl" width="822" height="1326" src="../assets/carousel_4.webp" alt="">
                     </newsCard>
                 </div>
 

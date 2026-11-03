@@ -40,7 +40,7 @@
                         </div>
                     </div>
                 </div>
-                <img loading="lazy" decoding="async" class="md:w-1/2 w-full object-cover rounded-lg" src="../assets/map.webp" alt="Map">
+                <img loading="lazy" decoding="async" class="md:w-1/2 w-full object-cover rounded-lg" width="680" height="341" src="../assets/map.webp" alt="Map">
             </div>
 
             <div class="border-b border-[#D9DEE4] h-auto" />

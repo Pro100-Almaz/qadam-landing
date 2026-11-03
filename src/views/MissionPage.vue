@@ -16,7 +16,7 @@ import schoolFooter from '../components/schoolFooter.vue';
             </div>
             <div class="w-full flex justify-center">
                 <div class="w-3/4">
-                    <img loading="lazy" decoding="async" src="../assets/mission_image.webp" alt="">
+                    <img loading="lazy" decoding="async" width="1160" height="652" src="../assets/mission_image.webp" alt="">
                 </div>
             </div>
             <div class="mt-20 pb-20">

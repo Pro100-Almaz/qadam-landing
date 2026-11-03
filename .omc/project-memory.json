@@ -29,7 +29,7 @@
     "runtime": null
   },
   "build": {
-    "buildCommand": "mkdir -p public/docs/attestation && touch public/docs/attestation/.gitkeep && python3 - <<'EOF'\nimport json\np='src/main.js'; s=open(p).read()\ns=s.replace(\"\"\"        {\n            path: '/rus',\"\"\",\"\"\"        {\n            path: '/attestation',\n            component: () => import('./views/AttestationPage.vue')\n        },\n        {\n            path: '/rus',\"\"\")\nopen(p,'w').write(s)\nru={\"nav\":\"Аттестация школы\",\"title\":\"Аттестация школы\",\"heading\":\"Документы для аттестационной комиссии\",\n \"text\":\"На этой странице собраны документы Qadam School для проверки в рамках государственной аттестации. Каждый документ открывается в новой вкладке.\",\n \"open\":\"Открыть\",\"emptyTitle\":\"Документы готовятся\",\"emptyText\":\"Материалы для комиссии скоро появятся на этой странице. По вопросам аттестации свяжитесь с нами:\"}\nkz={\"nav\":\"Мектепті аттестаттау\",\"title\":\"Мектепті аттестаттау\",\"heading\":\"Аттестаттау комиссиясына арналған құжаттар\",\n \"text\":\"Бұл бетте мемлекеттік аттестаттау аясында тексеруге арналған Qadam School құжаттары жинақталған. Әр құжат жаңа қойындыда ашылады.\",\n \"open\":\"Ашу\",\"emptyTitle\":\"Құжаттар дайындалуда\",\"emptyText\":\"Комиссияға арналған материалдар жақын арада осы бетте пайда болады. Аттестаттау бойынша сұрақтар болса, бізбен хабарласыңыз:\"}\nfor name,data,ind in (('ru',ru,4),('kz',kz,2)):\n    p=f'src/locales/{name}.json'; s=open(p).read().rstrip()\n    block=json.dumps(data,ensure_ascii=False,indent=ind).replace('\\n','\\n'+' '*ind)\n    s=s[:-1].rstrip()+f',\\n{\" \"*ind}\"attestation\": {block}\\n}}\\n'\n    json.loads(s); open(p,'w').write(s)\np='src/components/schoolFooter.vue'; s=open(p).read()\nold=\"\"\"{{ $t('footer.enrollment') }}</RouterLink>\"\"\"\nassert s.count(old)==1\ns=s.replace(old, old+\"\"\"\n                    <RouterLink to=\"/attestation\" class=\"hover:text-orange-400\">{{ $t('attestation.nav') }}</RouterLink>\"\"\")\nopen(p,'w').write(s)\nEOF\nnpm run build 2>&1 | grep -E \"built|rror\"",
+    "buildCommand": "cd /Users/almazamanzholuly/Documents/qadam/qadam-landing; git diff --stat -- src ':!src/locales' ':!src/views/AttestationPage.vue'; git diff src/components/teamInfo.vue | head -20; npm run build 2>&1 | grep -E \"built|rror\"",
     "testCommand": null,
     "lintCommand": null,
     "devCommand": "npm run dev",
@@ -135,15 +135,15 @@
   },
   "hotPaths": [
     {
-      "path": "src/components/registerForm.vue",
-      "accessCount": 1,
-      "lastAccessed": 1793710458485,
+      "path": "src/views/AttestationPage.vue",
+      "accessCount": 2,
+      "lastAccessed": 1793713012844,
       "type": "file"
     },
     {
-      "path": "src/views/AttestationPage.vue",
+      "path": "src/components/registerForm.vue",
       "accessCount": 1,
-      "lastAccessed": 1793712118131,
+      "lastAccessed": 1793710458485,
       "type": "file"
     }
   ],

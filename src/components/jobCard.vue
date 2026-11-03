@@ -2,7 +2,7 @@
     <div class="bg-[#F3F5F8] flex flex-col gap-4 mb-10 p-6 rounded-xl">
         <div class="flex flex-col gap-2">
             <div class="flex flex-col md:flex-row gap-2">
-                <div class="mb-2">
+                <div class="mb-2 md:basis-[220px]">
                     <slot></slot>
                 </div>
                 <div class="flex flex-col justify-center">

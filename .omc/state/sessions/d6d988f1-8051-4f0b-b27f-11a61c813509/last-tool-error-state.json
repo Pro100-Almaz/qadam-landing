@@ -1,7 +1,7 @@
 {
   "tool_name": "Bash",
-  "tool_input_preview": "{\"command\":\"cd /Users/almazamanzholuly/Documents/qadam/qadam-landing; cat vercel.json; echo; head -60 src/style.css; echo =====; cat src/components/popUp.vue; echo ====; python3 -c \\\"import json;d=jso...",
-  "error": "Exit code 1\n{\n  \"rewrites\": [{ \"source\": \"/(.*)\", \"destination\": \"/index.html\" }]\n}\n\n@import \"tailwindcss\";\n:root{\n    background-color: #F3F5F8;\n}(eval):1: ==== not found",
-  "timestamp": "2026-11-03T12:53:05.577Z",
-  "retry_count": 2
+  "tool_input_preview": "{\"command\":\"cd /private/tmp/claude-501/-Users-almazamanzholuly-Documents-qadam-qadam-landing/d6d988f1-8051-4f0b-b27f-11a61c813509/scratchpad/cls && sed -n 5,8p before.txt; sed -n 29,31p before.txt; cd...",
+  "error": "Exit code 1\n\n== 390 /team CLS(sum)=0.0334 shifts=1\n  0.0334 @1434ms DIV.flex.flex-col.justify-center 622->785 h108->59 | DIV.flex.flex-col 779->0 h65->0 | DIV.w-full.border-b.border-[#D9DEE4].mb-4 746->0 h1->0\n\n== 1440 /team CLS(sum)=0.0027 shifts=1\n  0.0027 @1437ms DIV.flex.flex-col.justify-center 758->758 h108->142 | DIV.w-full.border-b.border-[#D9DEE4].mb-4 882->0 h1->0\n\n(eval):1: no matches found: --include=*.vue",
+  "timestamp": "2026-11-03T13:39:30.354Z",
+  "retry_count": 1
 }
