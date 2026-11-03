@@ -1,0 +1,7 @@
+{
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"cd /Users/almazamanzholuly/Documents/qadam/qadam-landing; cat vercel.json; echo; head -60 src/style.css; echo =====; cat src/components/popUp.vue; echo ====; python3 -c \\\"import json;d=jso...",
+  "error": "Exit code 1\n{\n  \"rewrites\": [{ \"source\": \"/(.*)\", \"destination\": \"/index.html\" }]\n}\n\n@import \"tailwindcss\";\n:root{\n    background-color: #F3F5F8;\n}(eval):1: ==== not found",
+  "timestamp": "2026-11-03T12:53:05.577Z",
+  "retry_count": 2
+}

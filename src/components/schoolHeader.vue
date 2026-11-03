@@ -131,6 +131,10 @@ watch(selectedLang, (newLang) => {
                             <router-link to="/enrollment" class="hover:text-orange-500"
                                 active-class="text-orange-500">{{ $t('admissions.hero.title') }}</router-link>
                         </li>
+                        <li class="font-bold">
+                            <router-link to="/register" class="hover:text-orange-500"
+                                active-class="text-orange-500">{{ $t('register.nav') }}</router-link>
+                        </li>
                     </ul>
                 </nav>
             </div>

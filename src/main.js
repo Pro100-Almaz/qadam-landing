@@ -9,6 +9,7 @@ import ExtraPage from './views/ExtraPage.vue';
 import PricePage from './views/PricePage.vue';
 import EnrollmentPage from './views/EnrollmentPage.vue';
 import OrdaPage from './views/OrdaPage.vue';
+import RegisterPage from './views/RegisterPage.vue';
 import App from './App.vue'
 import { createI18n } from 'vue-i18n';
 
@@ -71,6 +72,10 @@ const router = createRouter({
         {
             path: '/orda',
             component: OrdaPage
+        },
+        {
+            path: '/register',
+            component: RegisterPage
         },
         {
             path: '/rus',

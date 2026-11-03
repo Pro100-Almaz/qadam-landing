@@ -14,7 +14,7 @@
                     <div class="flex justify-between">
                         <div class="flex flex-col gap-4">
                             <h1 class="text-4xl md:text-7xl font-bold">
-                                {{ $t('admissions.hero.title') }}
+                                {{ title || $t('admissions.hero.title') }}
                             </h1>
                             <div class="w-full border-b border-white"></div>
                             <router-link to="/price">
@@ -46,4 +46,5 @@ import schoolHeader from '../components/schoolHeader.vue';
 import enrollmentImage from '../assets/enrollment-1.png';
 import { useRouter } from 'vue-router';
 const router = useRouter();
+defineProps({ title: String });
 </script>

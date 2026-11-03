@@ -1,3 +1,6 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+  "rewrites": [
+    { "source": "/api/register", "destination": "https://admissions.qadam.edu.kz/api/register" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
 }

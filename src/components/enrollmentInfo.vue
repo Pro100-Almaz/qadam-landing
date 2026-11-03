@@ -50,6 +50,10 @@
                                 </span>
                             </li>
                         </ul>
+                        <router-link to="/register"
+                            class="transition active:scale-95 duration-100 ease-in-out w-full md:w-auto text-center bg-gradient-to-r from-orange-400 to-yellow-400 text-black font-semibold px-4 py-2 rounded self-start">
+                            {{ $t('register.cta') }}
+                        </router-link>
                     </div>
                 </div>
 

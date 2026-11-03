@@ -7,4 +7,7 @@ export default defineConfig({
     tailwindcss(),
     vue()
   ],
+  server: {
+    proxy: { '/api': { target: 'https://admissions.qadam.edu.kz', changeOrigin: true } },
+  },
 })
