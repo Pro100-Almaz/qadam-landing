@@ -1,7 +1,7 @@
 <template>
     <div class="relative w-full h-[70vh] flex justify-center">
         <div :style="`background-image: url(${priceImage});`"
-            class="absolute inset-0 w-full h-full bg-center bg-no-repeat brightness-50 z-0"></div>
+            class="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat brightness-50 z-0"></div>
 
         <div class="relative z-10 w-3/4">
             <schoolHeader />

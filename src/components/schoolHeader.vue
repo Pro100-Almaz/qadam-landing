@@ -135,6 +135,10 @@ watch(selectedLang, (newLang) => {
                             <router-link to="/register" class="hover:text-orange-500"
                                 active-class="text-orange-500">{{ $t('register.nav') }}</router-link>
                         </li>
+                        <li class="font-bold">
+                            <router-link to="/attestation" class="hover:text-orange-500"
+                                active-class="text-orange-500">{{ $t('attestation.nav') }}</router-link>
+                        </li>
                     </ul>
                 </nav>
             </div>
