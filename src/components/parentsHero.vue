@@ -45,7 +45,7 @@
 </template>
 <script setup>
 import schoolHeader from './schoolHeader.vue';
-import parentsImage from '../assets/parents-1.png';
+import parentsImage from '../assets/parents-1.webp';
 import { useRouter } from 'vue-router';
 const router = useRouter();
 </script>

@@ -43,7 +43,7 @@
 
 <script setup>
 import schoolHeader from '../components/schoolHeader.vue';
-import enrollmentImage from '../assets/enrollment-1.png';
+import enrollmentImage from '../assets/enrollment-1.webp';
 import { useRouter } from 'vue-router';
 const router = useRouter();
 defineProps({ title: String });

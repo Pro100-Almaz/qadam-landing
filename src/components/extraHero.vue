@@ -41,5 +41,5 @@
 
 <script setup>
 import schoolHeader from '../components/schoolHeader.vue';
-import extraImage from '../assets/extra-1.png';
+import extraImage from '../assets/extra-1.webp';
 </script>

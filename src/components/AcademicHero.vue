@@ -53,7 +53,7 @@
 
 <script setup>
 import schoolHeader from '../components/schoolHeader.vue';
-import academicImage from '../assets/academic-1.png';
+import academicImage from '../assets/academic-1.webp';
 import { useRouter } from 'vue-router';
 const router = useRouter();
 </script>

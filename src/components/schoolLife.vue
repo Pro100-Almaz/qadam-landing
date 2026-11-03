@@ -6,7 +6,7 @@
         :style="{ transform: `translateX(-${offset}px)` }"
       >
         <template v-for="(image, index) in duplicatedImages" :key="index">
-          <img class="w-2/3 sm:w-1/3 md:w-1/4 shrink-0 aspect-[4/3] object-cover" :src="image" alt="" />
+          <img loading="lazy" decoding="async" class="w-2/3 sm:w-1/3 md:w-1/4 shrink-0 aspect-[4/3] object-cover" :src="image" alt="" />
         </template>
       </div>
     </div>
@@ -22,10 +22,10 @@
   const speed = 0.5;
   
   const images = [
-    new URL("../assets/IMG_3425.png", import.meta.url).href,
-    new URL("../assets/IMG_3364.png", import.meta.url).href,
-    new URL("../assets/IMG_3423.png", import.meta.url).href,
-    new URL("../assets/DSC09934.png", import.meta.url).href,
+    new URL("../assets/IMG_3425.webp", import.meta.url).href,
+    new URL("../assets/IMG_3364.webp", import.meta.url).href,
+    new URL("../assets/IMG_3423.webp", import.meta.url).href,
+    new URL("../assets/DSC09934.webp", import.meta.url).href,
   ];
   
   const duplicatedImages = [...images, ...images]; // for seamless loop

@@ -20,7 +20,7 @@ const openModal = () => {
     <div>
         <div class="relative">
             <schoolHeader />
-            <img class="w-full h-screen object-cover" src="../assets/IMG_2336.png" alt="School Image">
+            <img fetchpriority="high" class="w-full h-screen object-cover" src="../assets/IMG_2336.webp" alt="School Image">
             <heroInfo @showModal="openModal"/>
         </div>
         <div class="relative z-10 -mt-16 w-full flex justify-center">

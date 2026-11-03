@@ -20,10 +20,10 @@
 
             <!-- 2x2 Grid Section -->
             <div class="flex-1 grid grid-cols-2 gap-4">
-                <img src="../assets/orda-4.png" alt="">
-                <img src="../assets/orda-3.png" alt="">
-                <img src="../assets/orda-2.png" alt="">
-                <img src="../assets/orda-1.png" alt="">
+                <img loading="lazy" decoding="async" src="../assets/orda-4.webp" alt="">
+                <img loading="lazy" decoding="async" src="../assets/orda-3.webp" alt="">
+                <img loading="lazy" decoding="async" src="../assets/orda-2.webp" alt="">
+                <img loading="lazy" decoding="async" src="../assets/orda-1.webp" alt="">
             </div>
         </div>
     </div>

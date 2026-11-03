@@ -45,7 +45,7 @@
 
 <script setup>
 import schoolHeader from '../components/schoolHeader.vue';
-import priceImage from '../assets/price-1.jpg';
+import priceImage from '../assets/price-1.webp';
 import { useRouter } from 'vue-router';
 const router = useRouter();
 </script>

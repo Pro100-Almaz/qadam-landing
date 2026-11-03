@@ -40,7 +40,7 @@
                         </div>
                     </div>
                 </div>
-                <img class="md:w-1/2 w-full object-cover rounded-lg" src="../assets/map.png" alt="Map">
+                <img loading="lazy" decoding="async" class="md:w-1/2 w-full object-cover rounded-lg" src="../assets/map.webp" alt="Map">
             </div>
 
             <div class="border-b border-[#D9DEE4] h-auto" />
@@ -62,6 +62,7 @@
                 <div class="flex flex-col gap-3">
                     <RouterLink to="/price" class="hover:text-orange-400">{{ $t('footer.payment') }}</RouterLink>
                     <RouterLink to="/enrollment" class="hover:text-orange-400">{{ $t('footer.enrollment') }}</RouterLink>
+                    <RouterLink to="/attestation" class="hover:text-orange-400">{{ $t('attestation.nav') }}</RouterLink>
                 </div>
             </div>
         </div>

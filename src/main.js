@@ -1,15 +1,6 @@
 import { createApp } from 'vue'
 import './style.css'
 import HomePage from './views/HomePage.vue';
-import MissionPage from './views/MissionPage.vue';
-import TeamPage from './views/TeamPage.vue';
-import ParentsPage from './views/ParentsPage.vue';
-import AcademicPage from './views/AcademicPage.vue';
-import ExtraPage from './views/ExtraPage.vue';
-import PricePage from './views/PricePage.vue';
-import EnrollmentPage from './views/EnrollmentPage.vue';
-import OrdaPage from './views/OrdaPage.vue';
-import RegisterPage from './views/RegisterPage.vue';
 import App from './App.vue'
 import { createI18n } from 'vue-i18n';
 
@@ -43,39 +34,43 @@ const router = createRouter({
         },
         {
             path: '/mission',
-            component: MissionPage
+            component: () => import('./views/MissionPage.vue')
         },
         {
             path: '/team',
-            component: TeamPage
+            component: () => import('./views/TeamPage.vue')
         },
         {
             path: '/parents',
-            component: ParentsPage
+            component: () => import('./views/ParentsPage.vue')
         },
         {
             path: '/academic',
-            component: AcademicPage
+            component: () => import('./views/AcademicPage.vue')
         },
         {
             path: '/extra',
-            component: ExtraPage
+            component: () => import('./views/ExtraPage.vue')
         },
         {
             path: '/price',
-            component: PricePage
+            component: () => import('./views/PricePage.vue')
         },
         {
             path: '/enrollment',
-            component: EnrollmentPage
+            component: () => import('./views/EnrollmentPage.vue')
         },
         {
             path: '/orda',
-            component: OrdaPage
+            component: () => import('./views/OrdaPage.vue')
         },
         {
             path: '/register',
-            component: RegisterPage
+            component: () => import('./views/RegisterPage.vue')
+        },
+        {
+            path: '/attestation',
+            component: () => import('./views/AttestationPage.vue')
         },
         {
             path: '/rus',

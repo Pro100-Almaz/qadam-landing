@@ -9,10 +9,10 @@
                     <p>{{$t('mission.system.text-week-time')}}</p>
                     <p>{{$t('mission.system.text-week-improve')}}</p>
                 </div>
-                <img class="w-full md:w-3/5" src="../assets/orda-5.png" alt="">
+                <img loading="lazy" decoding="async" class="w-full md:w-3/5" src="../assets/orda-5.webp" alt="">
             </div>
             <div class="flex flex-col md:flex-row gap-4">
-                <img class="w-full md:w-3/5" src="../assets/orda-6.png" alt="">
+                <img loading="lazy" decoding="async" class="w-full md:w-3/5" src="../assets/orda-6.webp" alt="">
                 <div class="w-full md:w-2/5 bg-[#F3F5F8] p-4 rounded-xl flex flex-col gap-4">
                     <h2 class="text-2xl font-bold">{{$t('mission.system.title-year')}}</h2>
                     <p>{{$t('mission.system.text-year')}}</p>
@@ -25,7 +25,7 @@
                     <p>{{$t('mission.system.text-total-year')}}</p>
                     <p>{{$t('mission.system.text-total-year-time')}}</p>
                 </div>
-                <img class="w-full md:w-3/5" src="../assets/orda-7.png" alt="">
+                <img loading="lazy" decoding="async" class="w-full md:w-3/5" src="../assets/orda-7.webp" alt="">
             </div>
         </div>
     </div>
